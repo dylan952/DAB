@@ -20,7 +20,7 @@ public class Tester {
 		banque.addClient(cl);
 		banque.addClient(cl2);
 		//banque.afficherClients();
-		
+		//test
 		
 		DAB dab = new DAB();
 		dab.initialiser(banque);
