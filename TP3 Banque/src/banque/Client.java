@@ -64,6 +64,11 @@ public class Client extends Banque {
 	}
 	
 	public String toString(){
-		return prenom;
+		String chaine;
+		chaine ="Bilan des comptes de M. ou Mme "+this.prenom+"\n";
+		for (int i = 0; i < indexComptes; i++) {
+			chaine += "Numero du compte : " +comptes[i].getNumCompte()+" - Solde : "+ comptes[i].getSolde()+"\n";
+		}
+		return chaine;
 	}
 }

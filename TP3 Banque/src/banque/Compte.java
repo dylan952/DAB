@@ -1,6 +1,6 @@
 package banque;
 
-public class Compte extends Banque {
+public abstract class Compte extends Banque {
 	public final int numCompte;
 	public int getNumCompte() {
 		return numCompte;
@@ -76,5 +76,8 @@ public class Compte extends Banque {
 
 	}
 
+	public String toString(){
+	return 	"Compte numero : " + this.numCompte + ", Solde : "+ this.solde;	
+	}
 
 }
