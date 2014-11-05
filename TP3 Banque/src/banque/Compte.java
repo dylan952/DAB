@@ -19,8 +19,7 @@ public abstract class Compte {
 	}
 
 	public void affiche() {
-		System.out.println("Compte numero : " + this.numCompte + ", Solde : "
-				+ this.solde);
+		System.out.println("Compte numero : " + this.numCompte + ", Solde : "+ this.solde);
 
 	}
 
@@ -76,9 +75,7 @@ public abstract class Compte {
 		return numCompte;
 	}
 
-	public String toString(){
-	return 	"Compte numero : " + this.numCompte + ", Solde : "+ this.solde;	
-	}
+	public abstract String toString();
 	
 	public abstract boolean validerDebit(double montant);
 

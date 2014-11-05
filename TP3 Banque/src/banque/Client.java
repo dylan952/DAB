@@ -43,7 +43,7 @@ public class Client extends Banque {
 	public void afficher(){
 		System.out.println("Bilan des comptes de M. ou Mme "+this.prenom);
 		for (int i = 0; i < indexComptes; i++) {
-			System.out.println(i+1+")Numero du compte : "+comptes[i].getNumCompte()+" - Solde : "+ comptes[i].getSolde());
+			System.out.println( comptes[i].toString());
 		}
 	}
 	
@@ -55,7 +55,7 @@ public class Client extends Banque {
 	
 	public void afficherComptes(){
 		for (int i = 0; i < indexComptes; i++) {
-			System.out.println(i+1+") Compte n°"+comptes[i].getNumCompte());
+			System.out.println(comptes[i].toString());
 		}
 	}
 	
@@ -67,7 +67,7 @@ public class Client extends Banque {
 		String chaine;
 		chaine ="Bilan des comptes de M. ou Mme "+this.prenom+"\n";
 		for (int i = 0; i < indexComptes; i++) {
-			chaine += "Numero du compte : " +comptes[i].getNumCompte()+" - Solde : "+ comptes[i].getSolde()+"\n";
+			chaine += comptes[i].toString()+"\n";
 		}
 		return chaine;
 	}

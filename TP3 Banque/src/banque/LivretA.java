@@ -12,6 +12,10 @@ public class LivretA extends CompteRemunere{
 		if (montant < debitMax && solde - montant > this.depotMin )
 		return true;
 		else return false;
-	}
+	}	
 	
+	public String toString(){
+		return 	"Compte numero : " + this.numCompte + ", Solde : "+ this.solde+", TypeCompte : Livret A";	
+	}
+		
 }

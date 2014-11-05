@@ -15,4 +15,10 @@ public class CompteCheque extends Compte{
 		else return false;
 	}
 	
+	public String toString(){
+		return 	"Compte numero : " + this.numCompte + ", Solde : "+ this.solde+", TypeCompte : Compte Cheque";	
+	}
+		
+	
+	
 }

@@ -13,5 +13,8 @@ public class CEL extends CompteRemunere{
 		return true;
 		else return false;
 	}
-	
+	public String toString(){
+		return 	"Compte numero : " + this.numCompte + ", Solde : "+ this.solde+", TypeCompte : CEL";	
+	}
+		
 }
