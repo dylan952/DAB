@@ -1,14 +1,15 @@
 package banque;
 
+import java.util.ArrayList;
+
 public class Banque {
 
-	Client[] clients = new Client[10];
-	int indexClient = 0;
+	ArrayList<Client> clients = new ArrayList<Client>();
 	static int numero = 0;
 
 	protected void afficherClients() {
-		for (int i = 0; i < indexClient; i++) {
-			System.out.println(i+1 + ")" + clients[i].getPrenom());
+		for (Client c: clients) {
+			System.out.println(c.getPrenom());
 		}
 	}
 
@@ -17,11 +18,10 @@ public class Banque {
 	}
 	
 	protected void addClient(Client c){
-		clients[indexClient] = c;
-		indexClient++;
+		clients.add(c);
 	}
 
 	public Client getClients(int i) {
-		return clients[i];
+		return clients.get(i);
 	}
 }

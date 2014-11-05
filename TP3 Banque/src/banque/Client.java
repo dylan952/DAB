@@ -1,8 +1,10 @@
 package banque;
 
+import java.util.ArrayList;
+
 public class Client extends Banque {
 	String nom, prenom, adresse;
-	Compte[] comptes = new Compte[10];
+	ArrayList<Compte> comptes = new ArrayList<Compte>();
 	int indexComptes = 0;
 
 	public Client(String nom, String prenom, String adresse) {
@@ -36,38 +38,37 @@ public class Client extends Banque {
 	}
 	
 	public void addCompte(Compte c){
-		comptes[indexComptes] = c;
-		indexComptes++;
+		comptes.add(c);
 	}
 	
 	public void afficher(){
 		System.out.println("Bilan des comptes de M. ou Mme "+this.prenom);
-		for (int i = 0; i < indexComptes; i++) {
-			System.out.println( comptes[i].toString());
+		for (Compte c: comptes) {
+			System.out.println(c.toString());
 		}
 	}
 	
 	public void afficherCompte(int num){
 		
-			System.out.println("Bilan du compte n°"+comptes[num].getNumCompte()+" - Solde : "+ comptes[num].getSolde());
+			System.out.println("Bilan du compte n°"+comptes.get(num).getNumCompte()+" - Solde : "+ comptes.get(num).getSolde());
 		
 	}
 	
 	public void afficherComptes(){
-		for (int i = 0; i < indexComptes; i++) {
-			System.out.println(comptes[i].toString());
+		for (Compte c: comptes) {
+			System.out.println(c.toString());
 		}
 	}
 	
 	public Compte getCompte(int index){
-		return comptes[index];
+		return comptes.get(index);
 	}
 	
 	public String toString(){
 		String chaine;
 		chaine ="Bilan des comptes de M. ou Mme "+this.prenom+"\n";
-		for (int i = 0; i < indexComptes; i++) {
-			chaine += comptes[i].toString()+"\n";
+		for (Compte c: comptes) {
+			chaine += c.toString()+"\n";
 		}
 		return chaine;
 	}
