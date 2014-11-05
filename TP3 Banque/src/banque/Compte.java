@@ -1,11 +1,7 @@
 package banque;
 
-public abstract class Compte extends Banque {
+public abstract class Compte {
 	public final int numCompte;
-	public int getNumCompte() {
-		return numCompte;
-	}
-
 	double solde = 0;
 	int decouvertMax = -800;
 	int debitMax = 1000;
@@ -53,7 +49,7 @@ public abstract class Compte extends Banque {
 	}
 
 	public boolean debiter(double montant) {
-		if (montant < debitMax && solde - montant > decouvertMax && montant > 0) {
+		if (validerDebit(montant)) {
 			solde -= montant;
 			return true;
 		} else {
@@ -75,9 +71,15 @@ public abstract class Compte extends Banque {
 		}
 
 	}
+	
+	public int getNumCompte() {
+		return numCompte;
+	}
 
 	public String toString(){
 	return 	"Compte numero : " + this.numCompte + ", Solde : "+ this.solde;	
 	}
+	
+	public abstract boolean validerDebit(double montant);
 
 }
