@@ -2,8 +2,8 @@ package banque;
 
 public class Tester {
 	public static void main(String[] s) {
-		Compte c = new LivretA(1, 300);
-		Compte c2 = new PEL(2, 500);
+		LivretA c = new LivretA(1, 300);
+		PEL c2 = new PEL(2, 500);
 		
 		Client cl = new Client("pierre", "Martin", "abc ");
 		Client cl2 = new Client("pierre", "Robert", "abc ");
