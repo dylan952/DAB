@@ -43,7 +43,7 @@ public class Fenetre extends JFrame {
 			
 			JPanel p = new JPanel();
 			p.setBackground(Color.yellow);
-			Image i = new ImageIcon("C:\Users\Public\Pictures/Sample Pictures/Hortensias.jpg");
+			//Image i = new ImageIcon("");
 			fenetre.add(p);
 			
 		}
